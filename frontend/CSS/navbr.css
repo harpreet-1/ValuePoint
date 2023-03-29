@@ -1,0 +1,155 @@
+.navbar {
+  width: 100%;
+  box-shadow: 0px 0px 0px rgb(85 85 85 / 8%), 0px 2px 16px rgb(85 85 85 / 16%);
+  background: #fff;
+  padding: 0 36px;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  overflow: hidden;
+  justify-content: space-between;
+}
+
+.logo img {
+  /* overflow: hidden; */
+  width: 200px;
+  height: 50px;
+}
+
+.navbar a {
+  /* float: left; */
+  display: block;
+  color: black;
+  text-align: center;
+  padding: 0 16px;
+  text-decoration: none;
+  font-size: 20px;
+}
+.navbar .btn {
+  text-transform: uppercase;
+  text-align: center;
+  font-weight: bold;
+}
+
+.active {
+  background-color: #04aa6d;
+  color: white;
+}
+
+.navbar .icon {
+  display: none;
+}
+.navbar > :first-child {
+  display: flex;
+  align-items: center;
+}
+
+.dropdown {
+  float: left;
+  overflow: hidden;
+}
+
+.dropdown .btn {
+  font-size: 0.875rem;
+  border: none;
+  outline: none;
+  color: black;
+  padding: 14px 16px;
+  background-color: inherit;
+  font-family: inherit;
+  margin: 0;
+}
+
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  background-color: #f9f9f9;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-menu a {
+  float: none;
+  color: black;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
+}
+
+.dropdown:hover .btn {
+  /* background-color: #555555; */
+
+  color: #ce297e;
+}
+
+.dropdown-menu a:hover {
+  background-color: #cccccc;
+  color: black;
+}
+
+.dropdown:hover .dropdown-menu {
+  display: block;
+  margin-top: 10px;
+}
+
+.right_nav {
+  display: flex;
+
+  margin-right: 50px;
+}
+.right_nav > div {
+  margin: 0 15%;
+}
+
+@media screen and (max-width: 600px) {
+  .navbar a {
+    /* display: none; */
+  }
+  .dropdown .btn {
+    display: none;
+  }
+  .navbar a.icon {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    /* float: left; */
+    display: block;
+    /* border: 2px solid red; */
+  }
+  .navbar .logo {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  .navbar.responsive {
+    position: relative;
+  }
+  .navbar.responsive .icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+  }
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  .navbar.responsive a {
+    /* float: none; */
+    display: block;
+    text-align: left;
+  }
+  .navbar.responsive .dropdown {
+    float: none;
+  }
+  .navbar.responsive .dropdown-menu {
+    position: relative;
+  }
+  .navbar.responsive .dropdown .btn {
+    display: block;
+    width: 100%;
+    text-align: left;
+  }
+}
