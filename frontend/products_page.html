@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>valuePoint</title>
+
+    <!-- favicon------------------------------->
+    <link
+      rel="shortcut icon"
+      href="./images/main_logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- font-awesome ---------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  navbar css -->
+    <link rel="stylesheet" href="./CSS/global.css" />
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/product.css" />
+  </head>
+  <body>
+    <div class="navbar" id="nav">
+      <div>
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images//main_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            Women
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            men
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            kids
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            home
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">offers</button>
+        </div>
+        <a href="#" style="font-size: 15px" class="icon" onclick="myFunction()"
+          >☰
+        </a>
+      </div>
+
+      <div id="right_nav">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <p>SEARCH</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <p>CART</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-user"></i>
+
+          <p>PROFILE</p>
+        </div>
+        <div id="searchBox" class="serch_item">
+          <div>
+            <div class="serch_item" id="serch_cancle">✖️</div>
+          </div>
+          <input class="serch_item" type="search" name="" id="" />
+          <div class="serch_item" id="serch_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="main_container">
+      <div id="main_left">
+        <div class="filter_title">fliter and short</div>
+        <div class="filters uc">
+          <div>filter by</div>
+          <div id="filter_options">
+            <div class="dropdown">
+              <div>
+                <div>PRICE</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div>
+                <div>RATING</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div>
+                <div>discount</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div>
+                <div>CATEGORY</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="filters uc sorts">
+          <div>sort by</div>
+          <div id="filter_options">
+            <div class="dropdown">
+              <div>
+                <div>PRICE</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div>
+                <div>RATING</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+            <div class="dropdown">
+              <div>
+                <div>discount</div>
+                <div>+</div>
+              </div>
+              <div class="dropdown-menu">
+                <a href="#">Submenu Item 1</a>
+                <a href="#">Submenu Item 2</a>
+                <a href="#">Submenu Item 3</a>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div id="main_right">
+        <div class="product_categories">
+          <div>T-SHIRT</div>
+          <div>SHIRTS</div>
+          <div>JEANS</div>
+          <div>TROUSERS</div>
+          <div>ETHNIC SETS</div>
+          <div>FOOTWEAR</div>
+          <div>KIDS</div>
+          <div>HOME</div>
+          <div>ACCESSORY</div>
+          <div>WINTER</div>
+        </div>
+
+        <div id="products_main">
+          <div id="products_box">
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+            <div class="product_card">
+              <div class="product_card_img">
+                <img
+                  src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+                  alt=""
+                />
+                <p>12% off</p>
+              </div>
+              <div class="product_card_title">Brown Solid Formal Shirt</div>
+              <div class="product_card_price">
+                <div>
+                  <p>₹1049</p>
+                  <p>₹1049</p>
+                </div>
+                <div>🛒</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+  </body>
+</html>
