@@ -1,0 +1,113 @@
+<!-- HTML code -->
+<nav class="side-navbar">
+  <h2>Filters</h2>
+  <form>
+    <label for="rating-filter">Filter by rating:</label>
+    <select name="rating-filter" id="rating-filter">
+      <option value="">-- Select rating --</option>
+    </select>
+    <label for="category-filter">Filter by category:</label>
+    <select name="category-filter" id="category-filter">
+      <option value="">-- Select category --</option>
+    </select>
+    <label for="brand-filter">Filter by brand:</label>
+    <select name="brand-filter" id="brand-filter">
+      <option value="">-- Select brand --</option>
+    </select>
+    <label for="price-filter">Filter by price:</label>
+    <select name="price-filter" id="price-filter">
+      <option value="">-- Select price --</option>
+    </select>
+  </form>
+</nav>
+
+<script>
+  // JavaScript code
+  // Define the API endpoint to fetch the data from
+  const apiUrl = "https://jsonplaceholder.typicode.com/posts";
+
+  // Fetch the data from the API
+  fetch(apiUrl)
+    .then((response) => response.json())
+    .then((data) => {
+      // Create the filters based on the data
+      createFilters(data);
+    })
+    .catch((error) => console.log(error));
+
+  // Function to create the filters based on the data
+  function createFilters(data) {
+    // Get the filter elements
+    const ratingFilter = document.querySelector("#rating-filter");
+    const categoryFilter = document.querySelector("#category-filter");
+    const brandFilter = document.querySelector("#brand-filter");
+    const priceFilter = document.querySelector("#price-filter");
+
+    // Get the unique categories and brands from the data
+    const categories = [...new Set(data.map((item) => item.userId))];
+    const brands = [...new Set(data.map((item) => item.id))];
+
+    // Create the category filter options
+    categories.forEach((category) => {
+      const option = document.createElement("option");
+      option.value = category;
+      option.text = `Category ${category}`;
+      categoryFilter.appendChild(option);
+    });
+
+    // Create the brand filter options
+    brands.forEach((brand) => {
+      const option = document.createElement("option");
+      option.value = brand;
+      option.text = `Brand ${brand}`;
+      brandFilter.appendChild(option);
+    });
+
+    // Create the rating filter options
+    for (let i = 1; i <= 5; i++) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.text = `${i} stars`;
+      ratingFilter.appendChild(option);
+    }
+
+    // Create the price filter options
+    for (let i = 0; i <= 100; i += 10) {
+      const option = document.createElement("option");
+      option.value = i;
+      option.text = `$${i}`;
+      priceFilter.appendChild(option);
+    }
+  }
+</script>
+
+<style>
+  /* CSS code */
+  .side-navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 200px;
+    background-color: #f0f0f0;
+    padding: 20px;
+  }
+
+  h2 {
+    margin-bottom: 20px;
+  }
+
+  form {
+    display: flex;
+    flex-direction: column;
+  }
+
+  label {
+    margin-bottom: 10px;
+  }
+
+  select {
+    padding: 5px;
+    margin-bottom: 20px;
+  }
+</style>
