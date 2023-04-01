@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>valuePoint</title>
+
+    <!-- favicon------------------------------->
+    <link
+      rel="shortcut icon"
+      href="./images/main_logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- font-awesome ---------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  navbar css -->
+    <link rel="stylesheet" href="./CSS/global.css" />
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/product_detail.css" />
+  </head>
+  <body>
+    <div class="navbar" id="nav">
+      <div>
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images//main_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            Women
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            <span> men</span>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            kids
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            home
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">offers</button>
+        </div>
+        <a href="#" style="font-size: 15px" class="icon" onclick="myFunction()"
+          >☰
+        </a>
+      </div>
+
+      <div id="right_nav">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <p>SEARCH</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <p>CART</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-user"></i>
+
+          <p>PROFILE</p>
+        </div>
+        <div id="searchBox" class="serch_item">
+          <div>
+            <div class="serch_item" id="serch_cancle">✖️</div>
+          </div>
+          <input class="serch_item" type="search" name="" id="" />
+          <div class="serch_item" id="serch_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <section id="product_details_main"></section>
+    <section class="main">
+      <div class="left">
+        <div class="wish_list"><i class="fa-regular fa-heart"></i></div>
+        <div class="left_inner">
+          <div class="main_pic">
+            <img
+              class="big_img"
+              src="https://img3.junaroad.com/uiproducts/19111376/zoom_0-1672591931.jpg"
+              alt=""
+            />
+          </div>
+        </div>
+      </div>
+      <div class="right">
+        <div class="share">
+          <span>Share:</span><i class="fa-solid fa-share-from-square"></i>
+        </div>
+        <p class="model">SPECIAL</p>
+        <h1 id="title">GoPro HERO10 Black Action Camera with Holiday Bundle</h1>
+        <p class="model">
+          <span>SKU: GPHERO10HB</span><span> MFR: CHDRB-101-TH</span>
+        </p>
+        <div class="rating">
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+          <i class="fa-solid fa-star"></i>
+
+          <i class="fa-solid fa-star"></i>
+        </div>
+        <div class="product_size">
+          <p>SELECT SIZE</p>
+          <div class="sizes">
+            <div>S</div>
+            <div>M</div>
+            <div>L</div>
+            <div>XL</div>
+            <div>2XL</div>
+          </div>
+        </div>
+        <div class="price_details">
+          <div>
+            <div>M.R.P</div>
+            <div>:</div>
+            <div>$222</div>
+          </div>
+          <div>
+            <div>Price</div>
+            <div>:</div>
+            <div>$2322</div>
+          </div>
+          <div>
+            <div>You Save</div>
+            <div>:</div>
+            <div>$222</div>
+          </div>
+        </div>
+        <div>M.R.P. inclusive of all taxes</div>
+
+        <div class="button_box">
+          <div class="quantity">
+            <div id="quantity">1</div>
+
+            <div>
+              <i id="inrement" class="fa-solid fa-caret-up"></i
+              ><i id="decrement" class="fa-solid fa-caret-down"></i>
+            </div>
+          </div>
+          <div id="addtocart">
+            <span>Add to Cart</span>
+          </div>
+        </div>
+
+        <div class="stock_des">
+          <div>
+            <i class="fa-solid fa-square-check"></i>
+            <span>In Stock & Ready to Ship</span>
+          </div>
+
+          <div>
+            <i class="fa-solid fa-truck"></i>
+            <a href="">Calculate Shipping See all shipping options</a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <div class="price_offers">
+      <div>
+        <h6>No Cost EMI</h6>
+        <div>
+          Avail No Cost EMI on select cards for orders above ₹3000Avail No Cost
+          EMI on select cards for orders above ₹3000
+        </div>
+      </div>
+      <div>
+        <h6>Bank Offer</h6>
+        <div>
+          Upto ₹29.45 discount on HSBC Cashback Credit CardsUpto ₹29.45 discount
+          on HSBC Cashback Credit C…
+        </div>
+      </div>
+      <div>
+        <h6>Partner Offers</h6>
+        <div>
+          Get GST invoice and save up to 28% on business purchases. Sign up for
+          freeGet GST invoice and save up to 28% on business purchases.
+        </div>
+      </div>
+    </div>
+    <div id="top_deals_container">
+      <h2>PRODUCTS RELATED TO THIS ITEM</h2>
+      <div>
+        <div id="top_deals_container_left_btn">
+          <i class="fa-regular fa-circle-left"></i>
+        </div>
+        <div id="top_deals_container_right_btn">
+          <i class="fa-regular fa-circle-right"></i>
+        </div>
+      </div>
+      <div id="top_deals">
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+        <div class="top_deal_card">
+          <div class="top_deal_card_img">
+            <img
+              src="https://img3.junaroad.com/uiproducts/16457181/zoom_0-1564060665.jpg"
+              alt=""
+            />
+            <p>12% off</p>
+          </div>
+          <div class="top_deal_card_title">Brown Solid Formal Shirt</div>
+          <div class="top_deal_card_price">
+            <div>
+              <p>₹1049</p>
+              <p>₹1049</p>
+            </div>
+            <div>🛒</div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer id="footer">
+      <section id="footer_help">
+        <nav>
+          <p>800-223-2500</p>
+          <p>Help-Center</p>
+          <p>NYc Store Hours</p>
+          <p>Live Chat</p>
+        </nav>
+      </section>
+      <section id="connect">
+        <div class="feedback">
+          <h4>How Are We Doing?</h4>
+          <p>Your opinions and comments are valuable to us.</p>
+          <a href="#">We'd love to get your feedback!</a>
+          <h4>Connect with Us</h4>
+          <div class="social_icon">
+            <i class="fa-brands fa-square-facebook"></i>
+            <i class="fa-brands fa-twitter"></i>
+            <i class="fa-brands fa-youtube"></i>
+            <i class="fa-brands fa-instagram"></i>
+          </div>
+        </div>
+
+        <div class="first_shoping">
+          <h4>Get Free Shipping On Your First Purchase*</h4>
+          <p>
+            When you sign up for ValuePoint News and Special Offers. Plus,
+            Rewards members earn <a href="#">25 points</a> just for signing up!
+          </p>
+          <a id="more_stories" href="#">View more Stories...</a>
+        </div>
+        <div class="footer_signup">
+          <h4>Stay in the Know</h4>
+          <p>
+            Get exclusive access to expert tips and special offers. Plus, VIP
+            Rewards members earn 25 Points!
+          </p>
+          <div class="input">
+            <input type="email" placeholder="Email Address" />
+            <button>Sign Up</button>
+          </div>
+        </div>
+      </section>
+
+      <section id="footer_visit">
+        <div id="footer_links">
+          <div>
+            <h4>Who We Are</h4>
+            <li><a href="#">About valuePoint</a></li>
+            <li><a href="#">Our History</a></li>
+            <li><a href="#">Creator Highlights</a></li>
+            <li><a href="#">valuePoint Reviews</a></li>
+            <li><a href="#">Map & Direction</a></li>
+            <li><a href="#">Events</a></li>
+
+            <li><a href="#">Gift Cards</a></li>
+            <li><a href="#">Brands</a></li>
+
+            <li><a href="#">Careers</a></li>
+          </div>
+          <!-- <div>
+            <h4>Special Programs</h4>
+            <li><a href="#">Corporate</a></li>
+            <li><a href="#">Education</a></li>
+            <li><a href="#">Government</a></li>
+            <li><a href="#">VIP Rewards</a></li>
+            <li><a href="#">CapturePoint Protect</a></li>
+
+            <h4>More Services</h4>
+            <li><a href="#">Photo Printing</a></li>
+            <li><a href="#">Photo Camera Rentals</a></li>
+            <li><a href="#">Sell Used Equipment</a></li>
+          </div> -->
+          <div>
+            <h4>How Can We Help?</h4>
+            <li><a href="#">Customer</a></li>
+            <li><a href="#">Track Your Order</a></li>
+            <li><a href="#">Shipping & Delivery</a></li>
+            <li><a href="#">In-Store Pickup</a></li>
+            <li><a href="#">International Orders</a></li>
+            <li><a href="#">Return Policy</a></li>
+            <li><a href="#">Contact Us</a></li>
+            <li><a href="#">Warranties</a></li>
+            <li><a href="#">Accessibility Policy</a></li>
+          </div>
+        </div>
+        <div id="location">
+          <img
+            src="https://www.adorama.com/col/UIimages/footer-store-pin-ado.png"
+            alt=""
+          />
+          <h4>Visit ValuePoint</h4>
+          <p>
+            Come visit our New York City store in the Flatiron/Chelsea district.
+          </p>
+          <a href="#">Location & Store Hours</a>
+        </div>
+      </section>
+
+      <section id="trusted">
+        <img src="./images/promo_image/footer/Screenshot (884).png" alt="" />
+      </section>
+
+      <div class="footer_copyright">
+        <p>
+          Copyright Adorama Camera, Inc. All rights reserved.
+          <span>•</span><a href="#">Privacy Policy</a
+          ><span class="ftr-bul">•</span><a d>Terms of Use</a><br />
+          42 West 18th Street New York, NY 10011 (<a href="#">directions</a>)
+          <span>•</span> 800.223.2500 <br />
+        </p>
+      </div>
+    </footer>
+  </body>
+  <script src="./JS/navbar.js"></script>
+</html>
