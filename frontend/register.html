@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <!-- favicon------------------------------->
+    <link
+      rel="shortcut icon"
+      href="./images/main_logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- font-awesome ---------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <link rel="stylesheet" href="CSS/login.css" />
+    <link rel="stylesheet" href="CSS/global.css" />
+    <link rel="stylesheet" href="CSS/navbar.css" />
+  </head>
+  <body>
+    <div class="navbar" id="nav">
+      <div>
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images//main_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            Women
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            <span> men</span>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            kids
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            home
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">offers</button>
+        </div>
+        <a href="#" style="font-size: 15px" class="icon" onclick="myFunction()"
+          >☰
+        </a>
+      </div>
+
+      <div id="right_nav">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <p>SEARCH</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <p>CART</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-user"></i>
+
+          <p>PROFILE</p>
+        </div>
+        <div id="searchBox" class="serch_item">
+          <div>
+            <div class="serch_item" id="serch_cancle">✖️</div>
+          </div>
+          <input class="serch_item" type="search" name="" id="" />
+          <div class="serch_item" id="serch_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="right_box">
+      <div class="form_box">
+        <h1>Create an Account</h1>
+        <form action="signin">
+          <div class="name">
+            <div class="first_name">
+              <label for=""><p>* Name:</p></label>
+              <input required id="first_name" placeholder=" Name" type="text" />
+            </div>
+          </div>
+          <label><p>*Your Email:</p></label>
+          <input id="email" required placeholder="Email Address" type="email" />
+          <label><p>*Password:</p></label>
+          <input id="pass" required placeholder="Password" type="password" />
+          <label><p>*Confirm Password:</p></label>
+          <input required placeholder="Password" type="password" />
+
+          <input type="submit" value="CREATE ACCOUNT" />
+        </form>
+        <div id="new_customer">
+          <h6>Have an Account ?</h6>
+          <a href="signin.html"> SIGN IN HERE</a>
+        </div>
+      </div>
+    </div>
+    <script>
+      let users = JSON.parse(localStorage.getItem("users")) || [];
+
+      let form = document.querySelector("form");
+      let first_name = document.getElementById("first_name");
+      let last_name = document.getElementById("last_name");
+      let email = document.getElementById("email");
+      let pass = document.getElementById("pass");
+
+      form.addEventListener("submit", (e) => {
+        e.preventDefault();
+        let userdata = {
+          first_name: first_name.value,
+          last_name: last_name.value,
+
+          email: email.value,
+          pass: pass.value,
+        };
+
+        if (check(userdata.email)) {
+          users.push(userdata);
+          localStorage.setItem("users", JSON.stringify(users));
+          alert(
+            "Congratulations, your created account has been successfully created "
+          );
+          window.location.href = "signin.html";
+        } else {
+          alert("user already exists please login !");
+        }
+      });
+
+      function check(input) {
+        for (let i = 0; i < users.length; i++) {
+          if (users[i].email == input) {
+            return false;
+          }
+        }
+        return true;
+      }
+    </script>
+  </body>
+</html>
