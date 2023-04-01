@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>valuePoint</title>
+
+    <!-- favicon------------------------------->
+    <link
+      rel="shortcut icon"
+      href="./images/main_logo.png"
+      type="image/x-icon"
+    />
+
+    <!-- font-awesome ---------------------------->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+      integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!--  navbar css -->
+    <link rel="stylesheet" href="./CSS/global.css" />
+    <link rel="stylesheet" href="./CSS/navbar.css" />
+    <link rel="stylesheet" href="./CSS/cart.css" />
+  </head>
+  <body>
+    <div class="navbar" id="nav">
+      <div>
+        <div class="logo">
+          <a href="./index.html">
+            <img src="./images//main_logo.png" alt="" />
+          </a>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            Women
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            <span> men</span>
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            kids
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">
+            home
+            <i class="fa fa-caret-down"></i>
+          </button>
+          <div class="dropdown-menu">
+            <a href="#">Item 1</a>
+            <a href="#">Item 2</a>
+            <a href="#">Item 3</a>
+          </div>
+        </div>
+        <div class="dropdown">
+          <button class="btn">offers</button>
+        </div>
+        <a href="#" style="font-size: 15px" class="icon" onclick="myFunction()"
+          >☰
+        </a>
+      </div>
+
+      <div id="right_nav">
+        <div>
+          <i class="fa-solid fa-magnifying-glass"></i>
+
+          <p>SEARCH</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-cart-shopping"></i>
+
+          <p>CART</p>
+        </div>
+
+        <div>
+          <i class="fa-solid fa-user"></i>
+
+          <p>PROFILE</p>
+        </div>
+        <div id="searchBox" class="serch_item">
+          <div>
+            <div class="serch_item" id="serch_cancle">✖️</div>
+          </div>
+          <input class="serch_item" type="search" name="" id="" />
+          <div class="serch_item" id="serch_icon">
+            <i class="fa-solid fa-magnifying-glass"></i>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main id="cart_body">
+      <section class="cart_head">
+        <div><h1 class="cart_heading">Shopping Cart</h1></div>
+        <div class="email_link">
+          <i class="fa-regular fa-envelope"></i>
+          <a href="#"> Email My Cart</a>
+          <i class="fa-solid fa-phone"></i>
+          <span>Need Help?Call <a href=""> 800-811-4002</a></span>
+        </div>
+      </section>
+      <header class="exprss_heading">
+        <h2 id="cart_status">Ship - Worldwide Express</h2>
+        <h3>Total Items :</h3>
+        <span class="total_item">0</span>
+      </header>
+      <section class="main">
+        <div class="cart_products">
+          <div class="product">
+            <div class="item_info">
+              <div class="cart_image">
+                <img
+                  id="image"
+                  src="https://www.adorama.com/images/Large/iest770320.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cart_item_name">
+                <h3 id="title">
+                  Epson T770 UltraChrome PRO10 Vivid Magenta Ink Cartridge for
+                  SureColor P700,25ml
+                </h3>
+                <span class="model"> SKU: IEST770320 </span>
+                <div class="stock">
+                  <i class="fa-solid fa-square-check"></i>
+                  <span>In Stock & Ready to Ship</span>
+                </div>
+              </div>
+              <div id="quantity">
+                <div>1</div>
+
+                <div>
+                  <i class="fa-solid fa-caret-up"></i
+                  ><i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="item_price">
+                <p><span>$</span><span class="price_element">37.99</span></p>
+              </div>
+            </div>
+            <div class="buttons_item">
+              <div class="savefor_later">
+                <div><a href="">Save For Later</a></div>
+                <div><a href="">Move to Wishlist</a></div>
+                <div></div>
+              </div>
+              <div class="remove_button">
+                <div>Remove</div>
+              </div>
+            </div>
+          </div>
+          <div class="product">
+            <div class="item_info">
+              <div class="cart_image">
+                <img
+                  src="https://www.adorama.com/images/Large/iest770320.jpg"
+                  alt=""
+                />
+              </div>
+              <div class="cart_item_name">
+                <h3>
+                  Epson T770 UltraChrome PRO10 Vivid Magenta Ink Cartridge for
+                  SureColor P700,25ml
+                </h3>
+                <span class="model"> SKU: IEST770320 </span>
+                <div class="stock">
+                  <i class="fa-solid fa-square-check"></i>
+                  <span>In Stock & Ready to Ship</span>
+                </div>
+              </div>
+              <div class="quantity1">
+                <div>1</div>
+
+                <div>
+                  <i class="fa-solid fa-caret-up"></i
+                  ><i class="fa-solid fa-caret-down"></i>
+                </div>
+              </div>
+              <div class="item_price">
+                <p><span>$</span><span class="price_element">37.99</span></p>
+              </div>
+            </div>
+            <div class="buttons_item">
+              <div class="savefor_later">
+                <div><a href="">Save For Later</a></div>
+                <div><a href="">Move to Wishlist</a></div>
+                <div></div>
+              </div>
+              <div class="remove_button">
+                <div>Remove</div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="cart_total_box">
+          <header><h2>Cart Summary</h2></header>
+          <div class="total_details">
+            <div class="subtotal">
+              <div><p>Subtotal</p></div>
+              <div class="subtotal_element">
+                <span>$</span> <span id="sub_total">0</span>
+              </div>
+            </div>
+            <p>Sipping</p>
+            <div class="charge">
+              <a href="">UPS Worldwide Express</a> <span>$64</span>
+            </div>
+            <div class="taxes">
+              <div>Taxes</div>
+              <div>$0</div>
+            </div>
+            <div class="order_total">
+              <div><h3>Order Total</h3></div>
+              <div>
+                <span><h3 class="dollor">$</h3></span>
+                <h3 class="total_order_element">767</h3>
+              </div>
+            </div>
+
+            <div class="checkout_btn">Proceed to Checkout</div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      checkout_btn = document.querySelector(".checkout_btn");
+      let cart_products = document.querySelector(".cart_products");
+      let total_amount_el = document.querySelector("#sub_total");
+      let total_order_element = document.querySelector(".total_order_element");
+      let total_item = document.querySelector(".total_item");
+      let login = localStorage.getItem("login") || false;
+      console.log(login);
+
+      let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
+
+      let total_amount = 0;
+
+      //   display(cart_data);
+      function display(data) {
+        let count = 0;
+        // cart_products.innerHTML = "";
+        data.forEach((element, index) => {
+          count += element.quantity;
+          let product = document.createElement("div");
+          product.setAttribute("class", "product");
+
+          let item_info = document.createElement("div");
+          item_info.setAttribute("class", "item_info");
+
+          let item_image = document.createElement("div");
+          item_image.setAttribute("class", "item_image");
+
+          let img = document.createElement("img");
+          img.setAttribute("src", element.image);
+          item_image.append(img);
+
+          let cart_item_name = document.createElement("div");
+          cart_item_name.setAttribute("class", "cart_item_name");
+
+          let title = document.createElement("h3");
+          title.innerText = element.title;
+
+          let model = document.createElement("span");
+          model.setAttribute("class", "model");
+          model.innerText = "SKU: IEST770320 ";
+
+          let stock = document.createElement("div");
+          stock.setAttribute("class", "stock");
+
+          let icon = document.createElement("i");
+          icon.setAttribute("class", "fa-solid fa-square-check");
+
+          let stocktext = document.createElement("span");
+          stocktext.innerText = "In Stock & Ready to Ship ";
+
+          stock.append(icon, stocktext);
+          cart_item_name.append(title, model, stock);
+
+          let quantity = document.createElement("div");
+          let quantity_number = document.createElement("div");
+          quantity.setAttribute("id", "quantity");
+          quantity_number.innerText = element.quantity;
+
+          let buttons = document.createElement("div");
+          let inc = document.createElement("i");
+          inc.setAttribute("class", "fa-solid fa-caret-up");
+          let dec = document.createElement("i");
+          dec.setAttribute("class", "fa-solid fa-caret-down");
+          buttons.append(inc, dec);
+
+          quantity.append(quantity_number, buttons);
+
+          let item_price = document.createElement("div");
+          item_price.setAttribute("class", "item_price");
+          let line = document.createElement("p");
+          let dollor = document.createElement("span");
+          dollor.innerText = "$";
+          let price_element = document.createElement("span");
+          price_element.innerText = element.price;
+          line.append(dollor, price_element);
+          item_price.append(line);
+
+          let cart_image = document.createElement("div");
+          cart_image.setAttribute("class", "cart_image");
+          let imae = document.createElement("img");
+          imae.src = element.image;
+          cart_image.append(imae);
+
+          item_info.append(cart_image, cart_item_name, quantity, item_price);
+
+          let buttons_item = document.createElement("div");
+          buttons_item.setAttribute("class", "buttons_item");
+          let savefor_later = document.createElement("div");
+          savefor_later.setAttribute("class", "savefor_later");
+
+          let save = document.createElement("div");
+          let wish = document.createElement("div");
+
+          let a1 = document.createElement("a");
+          a1.innerText = "Save For Later";
+          save.append(a1);
+          let a2 = document.createElement("a");
+          wish.append(a2);
+          a2.innerText = "Move to Wishlist";
+
+          savefor_later.append(save, wish);
+
+          let remove_button = document.createElement("div");
+          let div1 = document.createElement("div");
+          remove_button.setAttribute("class", "remove_button");
+          div1.innerText = "Remove";
+          remove_button.append(div1);
+          buttons_item.append(savefor_later, remove_button);
+          product.append(item_info, buttons_item);
+          cart_products.append(product);
+
+          let q = element.quantity;
+
+          inc.addEventListener("click", () => {
+            q++;
+            count++;
+            total_item.innerText = count;
+
+            quantity_number.innerText = q;
+            element.quantity = q;
+            total_amount = +total_amount + +element.price;
+            total_amount_el.innerText = total_amount.toFixed(2);
+            total_order_element.innerText = (total_amount + 64).toFixed(2);
+            localStorage.setItem(
+              "total",
+              JSON.stringify(total_amount.toFixed(2) + 64)
+            );
+            localStorage.setItem("cart_items", JSON.stringify(count));
+            document.getElementById("cart_quantity").innerText = count;
+
+            localStorage.setItem("cart", JSON.stringify(data));
+          });
+          dec.addEventListener("click", () => {
+            if (q > 1) {
+              q--;
+              count--;
+              total_item.innerText = count;
+
+              quantity_number.innerText = q;
+              element.quantity = q;
+              total_amount = +total_amount - +element.price;
+              total_amount_el.innerText = total_amount.toFixed(2);
+              total_order_element.innerText = (total_amount + 64).toFixed(2);
+              localStorage.setItem("cart", JSON.stringify(data));
+              localStorage.setItem("cart_items", JSON.stringify(count));
+              document.getElementById("cart_quantity").innerText = count;
+
+              localStorage.setItem("total", JSON.stringify(total_amount + 64));
+            }
+          });
+          div1.addEventListener("click", () => {
+            data.splice(index, 1);
+            localStorage.setItem("cart", JSON.stringify(data));
+            total_amount = 0;
+            // alert("removed");
+            display(data);
+          });
+
+          total_amount = total_amount + element.price * element.quantity;
+        });
+        total_amount_el.innerText = total_amount.toFixed(2);
+
+        total_order_element.innerText = (total_amount + 64).toFixed(2);
+        if (data.length == 0) {
+          count = 0;
+          document.querySelector(".cart_total_box").innerHTML = "";
+          total_order_element.innerText = 0;
+          document.getElementById("cart_status").innerText =
+            "Shopping Cart is Empty";
+
+          let box = document.createElement("div");
+          box.setAttribute("class", "continue_shoping");
+          cart_products.append(box);
+
+          box.innerText = "Continue Shoping";
+          box.addEventListener("click", () => {
+            window.location.href = "index.html";
+          });
+        }
+        // localStorage.setItem(
+        //   "total",
+        //   JSON.stringify(total_amount.toFixed(2) + 64)
+        // );
+        total_item.innerText = count;
+        localStorage.setItem("cart_items", JSON.stringify(count));
+        document.getElementById("cart_quantity").innerText = 0;
+      }
+
+      if (login) {
+        let log_out = document.createElement("span");
+        log_out.innerText = "Log Out";
+        log_out.style.fontSize = "12px";
+        log_out.style.textDecoration = "underline";
+        log_out.style.cursor = "pointer";
+        log_out.addEventListener("click", () => {
+          localStorage.removeItem("login");
+          window.location.href = "index.html";
+        });
+        document.getElementById("signin_text").innerHTML = "";
+        document.getElementById("signin_text").innerText = login;
+        document.getElementById("signin_text").append(log_out);
+      } else {
+        document.getElementById("signin_text").addEventListener("click", () => {
+          window.location.href = "signin.html";
+        });
+      }
+      document.getElementById("logo").addEventListener("click", () => {
+        window.location.href = "index.html";
+      });
+
+      checkout_btn.addEventListener("click", () => {
+        localStorage.setItem(
+          "total",
+          JSON.stringify(Math.floor(total_amount + 64))
+        );
+        window.location.href = "checkout.html";
+      });
+    </script>
+
+    <script src="cart.js"></script>
+    <script src="./js/userid.js"></script>
+  </body>
+</html>
