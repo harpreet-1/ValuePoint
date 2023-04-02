@@ -259,14 +259,39 @@
       let login = localStorage.getItem("login") || false;
       console.log(login);
 
-      let cart_data = JSON.parse(localStorage.getItem("cart")) || [];
+      const baseurl = "https://inquisitive-gray-hedgehog.cyclic.app/";
 
+      fetchProduct();
+      function fetchProduct() {
+        let res = fetch(`${baseurl}/todos/`, {
+          method: "GET",
+          headers: {
+            "content-type": "application/json",
+            Authorization: "Bearer " + localStorage.getItem("token"),
+          },
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then((data) => {
+            // console.log(data);
+            if (data.message) {
+            } else {
+            }
+            //   display(data);
+          })
+          .catch((err) => {
+            console.log(err);
+          });
+      }
       let total_amount = 0;
-
-      //   display(cart_data);
+      let cart_data = JSON.parse(localStorage.getItem("cart"));
+      // display();
+      console.log(cart_data);
+      display(cart_data);
       function display(data) {
         let count = 0;
-        // cart_products.innerHTML = "";
+        cart_products.innerHTML = "";
         data.forEach((element, index) => {
           count += element.quantity;
           let product = document.createElement("div");
@@ -279,7 +304,7 @@
           item_image.setAttribute("class", "item_image");
 
           let img = document.createElement("img");
-          img.setAttribute("src", element.image);
+          img.setAttribute("src", element.image1);
           item_image.append(img);
 
           let cart_item_name = document.createElement("div");
@@ -331,7 +356,7 @@
           let cart_image = document.createElement("div");
           cart_image.setAttribute("class", "cart_image");
           let imae = document.createElement("img");
-          imae.src = element.image;
+          imae.src = element.image1;
           cart_image.append(imae);
 
           item_info.append(cart_image, cart_item_name, quantity, item_price);
@@ -436,41 +461,19 @@
         // );
         total_item.innerText = count;
         localStorage.setItem("cart_items", JSON.stringify(count));
-        document.getElementById("cart_quantity").innerText = 0;
+        // document.getElementById("cart_quantity").innerText = 0;
       }
-
-      if (login) {
-        let log_out = document.createElement("span");
-        log_out.innerText = "Log Out";
-        log_out.style.fontSize = "12px";
-        log_out.style.textDecoration = "underline";
-        log_out.style.cursor = "pointer";
-        log_out.addEventListener("click", () => {
-          localStorage.removeItem("login");
-          window.location.href = "index.html";
-        });
-        document.getElementById("signin_text").innerHTML = "";
-        document.getElementById("signin_text").innerText = login;
-        document.getElementById("signin_text").append(log_out);
-      } else {
-        document.getElementById("signin_text").addEventListener("click", () => {
-          window.location.href = "signin.html";
-        });
-      }
-      document.getElementById("logo").addEventListener("click", () => {
-        window.location.href = "index.html";
-      });
 
       checkout_btn.addEventListener("click", () => {
-        localStorage.setItem(
-          "total",
-          JSON.stringify(Math.floor(total_amount + 64))
-        );
-        window.location.href = "checkout.html";
+        alert("payment successful");
+
+        window.location.href = "index.html";
+        localStorage.removeItem("cart");
       });
     </script>
 
     <script src="cart.js"></script>
     <script src="./js/userid.js"></script>
   </body>
+  <script src="./JS/logincheck.js"></script>
 </html>

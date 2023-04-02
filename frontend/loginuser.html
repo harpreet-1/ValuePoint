@@ -126,7 +126,7 @@
         </form>
         <div id="new_customer">
           <h6>New Customer ?</h6>
-          <a href="signin.html"> REGISTER HERE</a>
+          <a href="register.html"> REGISTER HERE</a>
         </div>
       </div>
     </div>
@@ -134,41 +134,44 @@
       let users = JSON.parse(localStorage.getItem("users")) || [];
 
       let form = document.querySelector("form");
-      let first_name = document.getElementById("first_name");
-      let last_name = document.getElementById("last_name");
+
       let email = document.getElementById("email");
       let pass = document.getElementById("pass");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
         let userdata = {
-          first_name: first_name.value,
-          last_name: last_name.value,
-
-          email: email.value,
-          pass: pass.value,
+          email: form.email.value,
+          password: form.pass.value,
         };
+        fetch(`https://inquisitive-gray-hedgehog.cyclic.app/users/login`, {
+          method: "POST",
+          headers: {
+            "content-type": "application/json",
+          },
+          body: JSON.stringify(userdata),
+        })
+          .then(function (response) {
+            return response.json();
+          })
+          .then((data) => {
+            const token = data.token;
+            if (data.message) {
+              alert("Wrong Credential");
+            } else {
+              console.log(data);
+              localStorage.setItem("token", token);
+              localStorage.setItem("username", data.user.username);
+              window.location.href = localStorage.getItem("loginfrom");
+            }
 
-        if (check(userdata.email)) {
-          users.push(userdata);
-          localStorage.setItem("users", JSON.stringify(users));
-          alert(
-            "Congratulations, your created account has been successfully created "
-          );
-          window.location.href = "signin.html";
-        } else {
-          alert("user already exists please login !");
-        }
+            // window.location.href()
+          })
+          .catch((err) => {
+            console.log(err);
+          });
       });
-
-      function check(input) {
-        for (let i = 0; i < users.length; i++) {
-          if (users[i].email == input) {
-            return false;
-          }
-        }
-        return true;
-      }
     </script>
   </body>
+  <script src="./JS/logincheck.js"></script>
 </html>

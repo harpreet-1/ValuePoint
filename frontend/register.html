@@ -124,18 +124,20 @@
               <input required id="first_name" placeholder=" Name" type="text" />
             </div>
           </div>
+          <label><p>*Your Mobile:</p></label>
+          <input id="mob" required placeholder="Mobile" type="number" />
           <label><p>*Your Email:</p></label>
           <input id="email" required placeholder="Email Address" type="email" />
           <label><p>*Password:</p></label>
           <input id="pass" required placeholder="Password" type="password" />
           <label><p>*Confirm Password:</p></label>
-          <input required placeholder="Password" type="password" />
+          <input id="pass2" required placeholder="Password" type="password" />
 
           <input type="submit" value="CREATE ACCOUNT" />
         </form>
         <div id="new_customer">
           <h6>Have an Account ?</h6>
-          <a href="signin.html"> SIGN IN HERE</a>
+          <a id="signinbtn" href="loginuser.html"> SIGN IN HERE</a>
         </div>
       </div>
     </div>
@@ -143,41 +145,49 @@
       let users = JSON.parse(localStorage.getItem("users")) || [];
 
       let form = document.querySelector("form");
-      let first_name = document.getElementById("first_name");
-      let last_name = document.getElementById("last_name");
+
       let email = document.getElementById("email");
       let pass = document.getElementById("pass");
 
       form.addEventListener("submit", (e) => {
         e.preventDefault();
-        let userdata = {
-          first_name: first_name.value,
-          last_name: last_name.value,
-
-          email: email.value,
-          pass: pass.value,
-        };
-
-        if (check(userdata.email)) {
-          users.push(userdata);
-          localStorage.setItem("users", JSON.stringify(users));
-          alert(
-            "Congratulations, your created account has been successfully created "
-          );
-          window.location.href = "signin.html";
+        if (form.pass.value !== form.pass2.value) {
+          alert("Password did not match");
         } else {
-          alert("user already exists please login !");
+          let userdata = {
+            email: form.email.value,
+            username: form.first_name.value,
+            mobile: form.mob.value,
+            password: form.pass.value,
+          };
+          fetch(`https://inquisitive-gray-hedgehog.cyclic.app/users/register`, {
+            method: "POST",
+            headers: {
+              "content-type": "application/json",
+            },
+            body: JSON.stringify(userdata),
+          })
+            .then(function (response) {
+              return response.json();
+            })
+            .then((data) => {
+              console.log(data);
+
+              if (data.message) {
+                alert(data.message);
+                window.location.href = "./loginuser.html";
+              } else {
+                console.log(data);
+                alert("Registration Successful ");
+                window.location.href = "./index.html";
+              }
+            })
+            .catch((err) => {
+              console.log(err);
+            });
         }
       });
-
-      function check(input) {
-        for (let i = 0; i < users.length; i++) {
-          if (users[i].email == input) {
-            return false;
-          }
-        }
-        return true;
-      }
     </script>
   </body>
+  <script src="./JS/logincheck.js"></script>
 </html>

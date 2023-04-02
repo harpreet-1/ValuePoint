@@ -6,6 +6,8 @@ const product_categories = document.querySelectorAll(".product_categories div");
 var search = localStorage.getItem("search") || "";
 const token = localStorage.getItem("token");
 
+let current_data = [];
+
 filter_options.forEach((option) => {
   option.addEventListener("click", () => {
     // if(option.innerHTML.includes("To")){
@@ -14,12 +16,11 @@ filter_options.forEach((option) => {
   });
 });
 
-// product_categories filter
+products_box.innerHTML = "";
 
 product_categories.forEach((el) => {
   el.addEventListener("click", () => {
-    query =
-      "search=" + el.innerHTML.slice(0, el.innerHTML.length - 1).toLowerCase();
+    search = el.innerHTML.slice(0, el.innerHTML.length - 1).toLowerCase();
 
     console.log(query);
     fetchProduct();
@@ -28,20 +29,20 @@ product_categories.forEach((el) => {
 
 let query = "jean";
 // side navbar filters
-input = document.querySelector("seacrh");
+// input = document.querySelector("seacrh");
 
 fetchProduct();
 function fetchProduct() {
   console.log(query);
-  let res = fetch(`http://localhost:7700/products?` + query, {
-    method: "GET",
-    headers: {
-      "content-type": "application/json",
-      Authorization:
-        "Bearer " +
-        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VySUQiOiI2NDIyYzgyOWMzYjM4NjIwYjFhZTNlMDIiLCJpYXQiOjE2ODAzNzAwNzYsImV4cCI6MTY4MDM3NzI3Nn0.L6_q-8kpKQRm_BZntMmKxEQ61HqWM_lVUEKYJ6EUmRc",
-    },
-  })
+  let res = fetch(
+    `https://inquisitive-gray-hedgehog.cyclic.app/products?search=` + search,
+    {
+      method: "GET",
+      headers: {
+        "content-type": "application/json",
+      },
+    }
+  )
     .then(function (response) {
       return response.json();
     })
@@ -53,12 +54,18 @@ function fetchProduct() {
       console.log(err);
     });
 }
-
+function myFunction(id) {
+  //   alert(id);
+  localStorage.setItem("id", id);
+  window.location.href = "./product_detail.html";
+}
 function display(data) {
   products_box.innerHTML = data
     .map((product) => {
       return ` <div class="product_card" >
-        <div class="product_card_img" id="${product._id}">
+        <div onclick="myFunction('${
+          product._id
+        }')" class="product_card_img" id="${product._id}">
           <img
             src="${product.image1}"
             alt=""
@@ -84,10 +91,10 @@ function display(data) {
     })
     .join("");
 
-  let images = document.querySelectorAll(".product_card_img");
-  images.forEach((image) => {
-    image.addEventListener("click", () => {
-      alert(image.getAttribute("id"));
-    });
-  });
+  // let images = document.querySelectorAll(".product_card_img");
+  // images.forEach((image) => {
+  //   image.addEventListener("click", () => {
+  //     alert(image.getAttribute("id"));
+  //   });
+  // });
 }
