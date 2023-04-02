@@ -48,7 +48,7 @@
         </div>
         <div class="dropdown">
           <button class="btn">
-            <span> men</span>
+            <span onclick="search('a')"> men</span>
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-menu">
@@ -58,7 +58,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="btn">
+          <button onclick="search('boy')" class="btn">
             kids
             <i class="fa fa-caret-down"></i>
           </button>
@@ -69,7 +69,7 @@
           </div>
         </div>
         <div class="dropdown">
-          <button class="btn">
+          <button class="btn" onclick="search('home')">
             home
             <i class="fa fa-caret-down"></i>
           </button>
@@ -90,7 +90,6 @@
       <div id="right_nav">
         <div>
           <i class="fa-solid fa-magnifying-glass"></i>
-
           <p>SEARCH</p>
         </div>
 
@@ -724,5 +723,7 @@
         offers_slider.scrollLeft += 850;
       }, 4000);
     </script>
+    <script src="./JS/logincheck.js"></script>
+    <script src="./JS/index.js"></script>
   </body>
 </html>

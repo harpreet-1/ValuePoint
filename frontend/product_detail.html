@@ -49,7 +49,7 @@
         </div>
         <div class="dropdown">
           <button class="btn">
-            <span> men</span>
+            men
             <i class="fa fa-caret-down"></i>
           </button>
           <div class="dropdown-menu">
@@ -104,7 +104,7 @@
         <div>
           <i class="fa-solid fa-user"></i>
 
-          <p>PROFILE</p>
+          <p id="uername">PROFILE</p>
         </div>
         <div id="searchBox" class="serch_item">
           <div>
@@ -120,7 +120,7 @@
     <section id="product_details_main"></section>
     <section class="main">
       <div class="left">
-        <div class="wish_list"><i class="fa-regular fa-heart"></i></div>
+        <!-- <div class="wish_list"><i class="fa-regular fa-heart"></i></div> -->
         <div class="left_inner">
           <div class="main_pic">
             <img
@@ -138,14 +138,14 @@
         <p class="model">SPECIAL</p>
         <h1 id="title">GoPro HERO10 Black Action Camera with Holiday Bundle</h1>
         <p class="model">
-          <span>SKU: GPHERO10HB</span><span> MFR: CHDRB-101-TH</span>
+          <!-- <span>SKU: GPHERO10HB</span><span> MFR: CHDRB-101-TH</span> -->
         </p>
         <div class="rating">
+          <!-- <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
           <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-          <i class="fa-solid fa-star"></i>
-
+          <i class="fa-solid fa-star"></i> -->
+          <span id="rating1" style="color: grey">2</span>
           <i class="fa-solid fa-star"></i>
         </div>
         <div class="product_size">
@@ -162,17 +162,17 @@
           <div>
             <div>M.R.P</div>
             <div>:</div>
-            <div>$222</div>
+            <div id="mrp_price">$222</div>
           </div>
           <div>
             <div>Price</div>
             <div>:</div>
-            <div>$2322</div>
+            <div id="dis_price">$2322</div>
           </div>
           <div>
             <div>You Save</div>
             <div>:</div>
-            <div>$222</div>
+            <div id="save">$222</div>
           </div>
         </div>
         <div>M.R.P. inclusive of all taxes</div>
@@ -227,7 +227,7 @@
         </div>
       </div>
     </div>
-    <div id="top_deals_container">
+    <!-- <div id="top_deals_container">
       <h2>PRODUCTS RELATED TO THIS ITEM</h2>
       <div>
         <div id="top_deals_container_left_btn">
@@ -375,7 +375,7 @@
           </div>
         </div>
       </div>
-    </div>
+    </div> -->
     <footer id="footer">
       <section id="footer_help">
         <nav>
@@ -490,5 +490,8 @@
       </div>
     </footer>
   </body>
+  <script src="./JS/product_detail.js"></script>
+
   <script src="./JS/navbar.js"></script>
+  <script src="./JS/logincheck.js"></script>
 </html>

@@ -119,7 +119,7 @@
     <main id="main_container">
       <div id="main_left">
         <div class="filter_title">fliter and short</div>
-        <div class="filters uc">
+        <div class="filters uc" id="filter_only">
           <div>filter by</div>
           <div id="filter_options">
             <div class="dropdown">
@@ -128,9 +128,10 @@
                 <div>+</div>
               </div>
               <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+                <a href="#" id="price-filter"> 0 To 499</a>
+                <a href="#">500 To 999 </a>
+                <a href="#">1000 To 1499</a>
+                <a href="#">1500 To 20000</a>
               </div>
             </div>
             <div class="dropdown">
@@ -138,10 +139,10 @@
                 <div>RATING</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="rating-filter" class="dropdown-menu">
+                <a href="#">0 to 2</a>
+                <a href="#">2 to 4</a>
+                <a href="#">4 to 5</a>
               </div>
             </div>
             <div class="dropdown">
@@ -149,10 +150,10 @@
                 <div>discount</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="discount-filter" class="dropdown-menu">
+                <a href="#">0 to 20%</a>
+                <a href="#">20 to 50%</a>
+                <a href="#">50 to 80%</a>
               </div>
             </div>
             <div class="dropdown">
@@ -160,10 +161,16 @@
                 <div>CATEGORY</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="category-filter" class="dropdown-menu">
+                <a data-search="tshirt" href="#">T-SHIRTS</a>
+                <a data-search="shirt" href="#">SHIRTS</a>
+                <a data-search="JEAN" href="#">JEANS</a>
+                <a data-search="TROUSER" href="#">TROUSERS</a>
+                <a data-search="ETHNIC" href="#">ETHNIC SETS</a>
+                <a data-search="FOOTWEAR" href="#">FOOTWEAR</a>
+                <a data-search="kid" href="#">KIDS</a>
+                <a data-search="ACCESSORY" href="#">ACCESSORY</a>
+                <a data-search="WINTER" href="#">WINTER</a>
               </div>
             </div>
           </div>
@@ -176,10 +183,9 @@
                 <div>PRICE</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="price-sort" class="dropdown-menu">
+                <a data-search="price" href="#">LOW TO HIGH</a>
+                <a data-search="-price" href="#">HIGH TO LOW</a>
               </div>
             </div>
             <div class="dropdown">
@@ -187,10 +193,9 @@
                 <div>RATING</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="rating-sort" class="dropdown-menu">
+                <a data-search="rating" href="#">LOW TO HIGH</a>
+                <a data-search="-rating" href="#">HIGH TO LOW</a>
               </div>
             </div>
             <div class="dropdown">
@@ -198,10 +203,9 @@
                 <div>discount</div>
                 <div>+</div>
               </div>
-              <div class="dropdown-menu">
-                <a href="#">Submenu Item 1</a>
-                <a href="#">Submenu Item 2</a>
-                <a href="#">Submenu Item 3</a>
+              <div id="discount-sort" class="dropdown-menu">
+                <a data-search="discount" href="#">LOW TO HIGH</a>
+                <a data-search="-discount" href="#">HIGH TO LOW</a>
               </div>
             </div>
           </div>
@@ -365,4 +369,6 @@
       </div>
     </main>
   </body>
+  <script src="./JS/product_page.js"></script>
+  <script src="./JS/logincheck.js"></script>
 </html>
