@@ -21,6 +21,7 @@ const createProduct = async (req, res) => {
 
 const getProducts = async (req, res) => {
   // return res.send("hello world");
+
   try {
     let page = 1;
     let limit = Infinity;
@@ -34,7 +35,7 @@ const getProducts = async (req, res) => {
     }
     skip = limit * (page - 1);
 
-    const movies = await productModel
+    let movies = productModel
       .find({
         $and: [
           { rating: { $lte: req.query.maxrating || 100 } },
@@ -48,9 +49,17 @@ const getProducts = async (req, res) => {
           { category: { $regex: req.query.search || "" } },
         ],
       })
+
       .skip(skip)
       .limit(limit);
-    res.json(movies);
+
+    if (req.query.sort) {
+      let sort = req.query.sort;
+      movies = movies.sort(sort);
+    }
+    let output = await movies;
+    // console.log(output);
+    res.json(output);
   } catch (error) {
     res.json({ message: error.message });
   }
