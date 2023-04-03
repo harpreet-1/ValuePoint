@@ -15,7 +15,7 @@ AND the creater is-
  Harpreet Singh
 
 
-Netlify Link-https://guileless-pastelito-b0fbc7.netlify.app/
+Netlify Link-https://incredible-pudding-38b5b7.netlify.app/index.html
 
 This is ecommerce brand specially for women where you can find products related to 
 "men clothing",
