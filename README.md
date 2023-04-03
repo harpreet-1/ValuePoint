@@ -28,8 +28,8 @@ and many more
 This is the first glance of our website where you see the landing page.
 Here you can see the NAVIGATION BAR on the top which will help you to acces all pages of website.
 NAVIGATION BAR contain SEARCH BAR option where you can search all the item whatever you want to buy.
+![Screenshot (1145)](https://user-images.githubusercontent.com/119473352/229416721-84047e91-21c4-40cc-bd04-c8b0318de6ed.png)
 
-![Screenshot (374)](https://drive.google.com/file/d/1tAHI2IAL5UdfoNCglvykRWujATeXuYuV/view?usp=sharing)
 
 
 
