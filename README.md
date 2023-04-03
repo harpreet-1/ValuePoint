@@ -7,7 +7,8 @@ Hello Everyone ,
 
 WELCOME in our Brand ValuePoint
 
-![e-removebg-preview](https://drive.google.com/file/d/1tAHI2IAL5UdfoNCglvykRWujATeXuYuV/view?usp=sharing)
+![Screenshot (1152)](https://user-images.githubusercontent.com/119473352/229416594-305e6cbb-cb6b-44b9-a3ca-b9fa1b9f127c.png)
+
 
 This is the website which we created with HTML,CSS,JAVASCRIPT.
 AND the creater is-
