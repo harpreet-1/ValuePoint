@@ -7,7 +7,7 @@ Hello Everyone ,
 
 WELCOME in our Brand ValuePoint
 
-![e-removebg-preview](https://user-images.githubusercontent.com/114987574/221412258-04330f72-050a-448e-91af-98ab3ec736ea.png)
+![e-removebg-preview](http://127.0.0.1:5500/images//main_logo.png)
 
 This is the website which we created with HTML,CSS,JAVASCRIPT.
 AND the creater is-
@@ -28,7 +28,7 @@ This is the first glance of our website where you see the landing page.
 Here you can see the NAVIGATION BAR on the top which will help you to acces all pages of website.
 NAVIGATION BAR contain SEARCH BAR option where you can search all the item whatever you want to buy.
 
-![Screenshot (374)](https://user-images.githubusercontent.com/114987574/221412578-dfda30a8-8412-43ac-8d4f-0fecf11f8328.png)
+![Screenshot (374)](https://user-images.git114987574/221412578-dfda30a8-8412-43ac-8d4f-0fecf11f8328.png)
 
 
 
