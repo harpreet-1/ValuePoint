@@ -7,7 +7,7 @@ Hello Everyone ,
 
 WELCOME in our Brand ValuePoint
 
-![e-removebg-preview](http://127.0.0.1:5500/images//main_logo.png)
+![e-removebg-preview](https://img3.junaroad.com/catalogues/2390963/602e881dbde28.jpg)
 
 This is the website which we created with HTML,CSS,JAVASCRIPT.
 AND the creater is-
