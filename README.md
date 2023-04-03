@@ -1,6 +1,5 @@
-#ValuePoint
 
-NXM 101 Solo Project 
+
 
 
 
