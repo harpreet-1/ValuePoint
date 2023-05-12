@@ -15,7 +15,7 @@ AND the creater is-
  Harpreet Singh
 
 
-Netlify Link-https://incredible-pudding-38b5b7.netlify.app/index.html
+Netlify Link-https://extraordinary-kitten-5728b1.netlify.app/
 
 This is ecommerce brand specially for women where you can find products related to 
 "men clothing",
