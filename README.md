@@ -17,6 +17,8 @@ AND the creater is-
 
 Netlify Link-https://extraordinary-kitten-5728b1.netlify.app/
 
+backend deployed link  -- https://inquisitive-gray-hedgehog.cyclic.app/
+
 This is ecommerce brand specially for women where you can find products related to 
 "men clothing",
 "BEAUTY products",
